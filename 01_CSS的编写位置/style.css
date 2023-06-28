@@ -1,0 +1,16 @@
+h1{
+    color: rgb(37, 185, 161);
+    font-size: 40px;
+}
+h2{
+    color: green;
+    font-size: 80px;
+}
+p{
+    color: blue;
+    font-size: 60px;
+}
+img{
+    width: 200px;
+    height: 200px;
+}

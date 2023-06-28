@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* div倒数第n个的儿子元素(所有儿子) 见结构1*/
+        /* div>p:nth-last-child(2){
+            color: red;
+        } */
+
+        /* div倒数第n个的类型为p元素 见结构2 */
+        /* div>p:nth-last-of-type(2){
+            color: red;
+        } */
+
+        /* 选中没有兄弟的span元素 见结构2，3*/
+        /* 2里面span不是唯一孩子，3里面span是唯一孩子 */
+        /* span:only-child{
+            color: red;
+        } */
+
+        /* 选中没有同类型兄弟的span元素 见结构2,3,4*/
+        /* 2里面span不是唯一的，3，4里面span是唯一的 */
+        /* span:only-of-type{
+            color: red;
+        } */
+        /* 选中html根元素 */
+        /* :root{
+            background-color: red ;
+        } */
+        
+    </style>
+</head>
+<body>
+    <!-- 结构1 -->
+        <!-- <div>
+        <p>张三：98</p>
+        <p>李四：99</p>
+        <p>王五：90</p>
+        <span>赵六：90</span>
+    </div> -->
+
+    <!-- 结构2 -->
+    <div>
+        <span>1</span>
+        <p>2</p>
+        <p>3</p>
+        <span>4</span>
+        <p>5</p>
+        <p>6</p>
+        <span>7</span>
+    </div>
+
+    <!-- 结构3 -->
+    <div>
+        <span>test</span>
+    </div>
+
+    <!-- 结构4 -->
+    <div>
+        <span>test2</span>
+        <p>1</p>
+        <p>2</p>
+
+    </div>
+</body>
+</html>

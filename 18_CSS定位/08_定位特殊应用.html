@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .out{
+            height: 400px;
+            width: 800px;
+            background-color: gray;
+            
+            /* 第一种居中 */
+            /* border: 1px red solid; */
+
+            /* 第二种居中 */
+            position: relative;
+        }
+        .in{
+            width: 400px;
+            height: 100px;
+            background-color: orange;
+            font-size: 20px;
+
+            /* 第一种居中 */
+            /* margin: 0 auto;
+            margin-top: 150px; */
+
+            /* 第二种居中 */
+            position: absolute;
+            top: 150px;
+            bottom: 150px;
+            left: 200px;
+            right: 200px;
+
+            /* 文本居中 */
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="out">
+        <div class="in">你好</div>
+    </div>
+</body>
+</html>

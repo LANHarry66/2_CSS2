@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: 100px;
+            background-color: aqua;
+            height: 300px;
+        }
+        span{
+            background-color: orange;
+            font-size: 40px;
+            vertical-align: middle;
+        }
+        img{
+            height: 30px;
+            vertical-align: middle;
+        }
+        .si{
+            /* 与张三的方式对比.张三用html控制，李四用css控制 */
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        LHRx
+        <span>x前端</span>
+    </div>
+    <hr>
+    <div>LHRx
+        <img src="../01_CSS的编写位置/Explosion_4k.jpg" alt="">
+    </div>
+    <table border="1" cellspacing="0">
+        <caption>人员信息</caption>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr height="200px">
+                <td valign="top">张三</td>
+                <td>18</td>
+                <td>男</td>
+            </tr>
+            <tr height="200px">
+                <td class="si">李四</td>
+                <td>20</td>
+                <td>女</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>供给：2人</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
+<!-- vertical-align不能控制块元素 -->

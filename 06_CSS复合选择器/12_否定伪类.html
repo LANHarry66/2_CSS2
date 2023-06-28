@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 选中div儿子p元素，但是排除类为fail的元素 */
+        /* div>p:not(.fail){
+            color: red;
+        } */
+
+        /* 选中div的儿子p元素，但是属性title以你要加油啊开头的排除 */
+        /* div>p:not([title^="你要加油啊"]){
+            color: red;
+        } */
+
+        /* 排除第一个儿子 */
+        div>p:not(:first-child){
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>张三：98</p>
+        <p>李四：99</p>
+        <p>王五：90</p>
+        <p class="fail" title="你要加油啊">赵六：60</p>
+    </div>
+</body>
+</html>

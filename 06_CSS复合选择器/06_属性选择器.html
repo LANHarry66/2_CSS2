@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*选中具有title属性的元素*/
+        [title]{
+            color: red;
+        }
+        /*选中具有title属性且值为t1的元素*/
+        [title="t1"]{
+            color: blue;
+        }
+        /*选中具有title属性，且以t1开头的元素*/
+        [title^="t1"]{
+            color: greenyellow;
+        }
+        /*选中具有title属性，且以4结尾的元素*/
+        [title$="4"]{
+            color: chocolate;
+        }
+        /*选中具有title属性，且只要包含u的值的元素*/
+        [title*="t"]{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div title="t1">test1</div>
+    <div title="t2">test2</div>
+    <div title="t3">test3</div>
+    <div title="t4">test4</div>
+</body>
+</html>

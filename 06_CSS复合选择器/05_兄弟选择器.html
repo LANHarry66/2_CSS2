@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*注意+表示紧紧相邻（向下）的元素*/
+        div+p{
+            color: red;
+        }
+        /*注意~表示所有的兄弟（向下）p元素*/
+        div~p{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>尚硅谷</div>
+    <p>前端</p>
+    <p>java</p>
+    <p>UI</p>
+</body>
+</html>

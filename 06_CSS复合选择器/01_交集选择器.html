@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .rich{
+            color: gold;
+        }
+        .actor{
+            color: pink;
+        }
+        /*交集选择器*/
+        p.rich{
+            font-size: 80px;
+        }
+        p.rich#wc{
+            color: green;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2 class="rich">土豪张三</h2>
+    <h2 class="actor">明星李四</h2>
+    <hr>
+    <p class="rich" id="wc">旺财</p>
+    <p class="rich">佩奇</p>
+</body>
+</html>

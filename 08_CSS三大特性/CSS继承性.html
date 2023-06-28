@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            color: red;
+            font-size: 40px;
+        }
+        /* 就近原则，前123个span离div近，第4个span离p近 */
+        p{
+            color: purple;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        我是div中文字
+        <span>
+            我是span中文字1
+        </span>
+        <span>
+            我是span中文字2
+        </span>
+        <span>
+            我是span中文字3
+        </span>
+        <p>
+            <span>
+                我是span中文字4
+            </span>
+        </p>
+    </div>
+</body>
+</html>

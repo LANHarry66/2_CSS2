@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 40px;
+        }
+        /* 第一种表示长度单位 */
+        #d1{
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+            font-size: 40px;
+        }
+        /* 第二种表示长度单位 em相当于当前元素font-size的倍数 */
+        #d2{
+            width: 10em;
+            height: 10em;
+            background-color: aqua;
+            font-size: 40px;
+        }
+        /* 第三种表示长度单位 rem相当于根元素htmlfont-size的倍数 */
+        #d3{
+            width: 10rem;
+            height: 10rem;
+            background-color: aqua;
+            font-size: 40px;
+        }
+        /*  */
+        #d4{
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+            font-size: 40px;
+        }
+        .inside{
+            /* %相对于父元素而言 */
+            width: 50%;
+            height: 25%;
+            font-size: 150%;
+            background-color: orange;
+        }
+        .test{
+            font-size: 40px;
+            /* text-indent: 80px; */
+            text-indent: 2em;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">1</div>
+    <br>
+    <div id="d2">2</div>
+    <br>
+    <div id="d3">3</div>
+    <br>
+    <div id="d4">
+        <div class="inside">4</div>
+    </div>
+
+    <div class="test">红红火火恍恍惚惚</div>
+</body>
+</html>

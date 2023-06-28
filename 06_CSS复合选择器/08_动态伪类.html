@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*这四个顺序不能乱写lvha*/
+        /*选中的是没有访问过的a*/
+        a:link{
+            color: red;
+        }
+        /*选中的是访问过的a元素*/
+        a:visited{
+            color: grey;
+        }
+        /*选中得时鼠标悬浮状态的a元素*/
+        a:hover{
+            color: orange;
+        }
+        /*选中的是激活状态的a元素*/
+        a:active{
+            color: blue;
+        }
+        p:hover{
+            color: red;
+        }
+        p:active{
+            color: green;
+        }
+        /*获取焦点后，背景颜色会改变*/
+        /*focus只能在可以输入的元素使用*/
+        input:focus,select:focus{
+            color: red;
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.baidu.com/s" target="_blank">去百度</a>
+    <a href="https://www.jd.com" target="_blank">去京东</a>
+    <p>LHR</p>
+    输入框<input type="text">
+    <select>
+        <option>北京</option>
+        <option>上海</option>
+    </select>
+</body>
+</html>

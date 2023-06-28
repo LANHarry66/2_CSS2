@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .page-header{
+            height: 100px;
+            background-color: orange;
+            text-align: center;
+            line-height: 100px;
+            font-size: 20px;
+        }
+        body{
+            height: 2500px;
+        }
+        /* .container{
+            height: 200px;
+            
+            overflow: auto;
+        } */
+        .item{
+            background-color: gray;
+        }
+        .d{
+            background-color: skyblue;
+            font-size: 40px;
+            /* 开启粘性 */
+            position: sticky;
+            /* 距离顶端0px生效 */
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="page-header">头部</div>
+    <!-- 内容区 -->
+    <div class="container">
+        <!-- 每一项 -->
+        <div class="item">
+            <div class="d">A</div>
+            <h2>a1</h2>
+            <h2>a2</h2>
+            <h2>a3</h2>
+            <h2>a4</h2>
+            <h2>a5</h2>
+            <h2>a6</h2>
+            <h2>a7</h2>
+            <h2>a8</h2>
+        </div>
+        <div class="item">
+            <div class="d">B</div>
+            <h2>b1</h2>
+            <h2>b2</h2>
+            <h2>b3</h2>
+            <h2>b4</h2>
+            <h2>b5</h2>
+            <h2>b6</h2>
+            <h2>b7</h2>
+            <h2>b8</h2>
+        </div>
+        <div class="item">
+            <div class="d">C</div>
+            <h2>c1</h2>
+            <h2>c2</h2>
+            <h2>c3</h2>
+            <h2>c4</h2>
+            <h2>c5</h2>
+            <h2>c6</h2>
+            <h2>c7</h2>
+            <h2>c8</h2>
+        </div>
+    </div>
+</body>
+</html>
+<!-- 粘性定位，参考的是最近的具有滚动行为的祖先元素 -->
+<!-- 当包含粘性定位的父容器消失在视口时，粘性失效 -->
+
+<!-- 粘性定位参考点是：离他最近的一个具有滚动行为的祖先元素 -->
+
+<!-- 特点:
+    1.不会脱离文档流,是一种专门用于窗口滚动时的新定位方式
+    2.最常用的值是top
+    3.粘性定位和浮动可以同时设置,不推荐
+    4.粘性定位的元素,可以通过margin调整位置,但不推荐
+-->

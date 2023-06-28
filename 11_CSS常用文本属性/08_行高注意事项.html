@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 行高不能过小，文字会重叠，最小值为0，不能为负数 见结构1*/
+        #d1{
+            font-size: 40px;
+            line-height: 1.5;
+        }
+
+        /* 行高可以继承 见结构2*/
+        #d2{
+            font-size: 40px;
+            line-height: 1.5;
+            background-color: skyblue;
+        }
+        span{
+            color: red;
+            font-size: 200px;
+            /* line-height: 50px; */
+            /* line-height 可以继承，如果span没写，则继承div的1.5 */
+        }
+
+        /* line-height指得行高，height指得整个元素高度 见结构3*/
+        /* 有height，整个div的高度就是height，没有height有line-height，高度就是line-height*行数 */
+        #d3{
+            font-size: 40px;
+            background-color: yellowgreen;
+            line-height: 1.5;
+        }
+
+        #d4{
+            font-size: 40px;
+            background-color: aqua;
+            height: 400px;
+        }
+
+        
+        #d5{
+            font-size: 40px;
+            background-color: aqua;
+            line-height: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 结构1 -->
+    <!-- <div id="d1">LHR1</div> -->
+
+    <!-- 结构2 -->
+    <!-- <div id="d2">Lorem ipsum dolor sit amet consectetur,omnis iure officiis ipsam, sint culpaomnis iure officiis ipsam, sint <culpa></culpa> <span>adipisicing</span> elit. Recusandae omnis iure officiis ipsam, sint culpa repellendus laborum possimus aliquid odio quam quaerat rerum quis doloremque assumenda. Facilis ullam quibusdam expedita nemo, est accusamus voluptatum repellat totam, autem reprehenderit, iure odit distinctio possimus. Eaque tempora hic architecto sapiente delectus dolorum ut mollitia quaerat repellat fugiat! Officiis nisi eius esse aut maiores.</div> -->
+
+    <!-- 结构3 -->
+    <!-- <div id="d3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nostrum nam ea! Repellendus quod eaque animi maxime fugiat reiciendis modi cumque tenetur facere, earum sit ipsa tempore incidunt nam magnam excepturi rerum labore eius quae. Tempore modi neque quisquam corrupti officia eius doloremque, sapiente ducimus autem id omnis obcaecati eos magnam dignissimos nihil minus culpa perspiciatis inventore quas laborum! Doloribus.</div>
+    <div id="d4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nostrum nam ea! Repellendus quod eaque animi maxime fugiat reiciendis modi cumque tenetur facere, earum sit ipsa tempore incidunt nam magnam excepturi rerum labore eius quae. Tempore modi neque quisquam corrupti officia eius doloremque, sapiente ducimus autem id omnis obcaecati eos magnam dignissimos nihil minus culpa perspiciatis inventore quas laborum! Doloribus.</div> -->
+
+    <!-- 结构4 -->
+    <div id="d5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis iure suscipit earum. Illo fugiat magni, repudiandae dignissimos nostrum nulla iure. Alias perspiciatis, doloribus quaerat pariatur sed expedita esse ipsam hic odio perferendis voluptatem autem fuga velit vero delectus id repudiandae consectetur quasi. Hic explicabo doloremque exercitationem iure esse sit necessitatibus nisi rem aspernatur ipsa vel, at eius distinctio veniam nobis.</div>
+</body>
+</html>
+
+<!-- 总结：行高应用场景， 1.调整多行文字的间距
+                        2.单行文字垂直居中，多行不行，让line-height = height
+                         -->

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .out{
+            width: 500px;
+            background-color: skyblue;
+            border: 1px red solid;
+            padding: 20px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            background-color: gray;
+        }
+        .box2{
+            background-color: orange;
+            /* 开启相对定位，层级比box1，box3（3还没开）高，，所以2压在3上面。但是没有浮空 */
+            position: relative;
+            /* 左和右不能同时用，同时用左生效，不关先后 */
+            left: 100px;
+            /*  */
+            top: 50px;
+        }
+        .box3{
+            /* 2,3都开定位，3后开，就会压在2上面 */
+            position:relative;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="out">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+</body>
+</html>
+
+<!-- 相对定位对margin和浮动没影响，但是不推荐一起使用 -->
+<!-- 相对定位：使用left right top bottom调整位置
+    特点
+    1.不会脱离文档流，即不会浮空
+    2.开启相对定位的元素现实的层级比普通元素高，无论什么定位（相对 绝对），显示层级都一样。  
+        定位的元素比普通元素层级高
+        都发生定位的两个元素，后写的元素会盖在先写的元素上
+    3.left不能和right一起设置，一起写left奏效。top和bottom不能一起设置，一起写top奏效
+    4.相对定位元素可以浮动，但是不推荐
+    5.相对定位元素可以通过margin调整位置，但是也不推荐  
+-->

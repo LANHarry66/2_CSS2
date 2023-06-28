@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*div第一个儿子p元素(按照所有兄弟计算),见结构1*/
+        div>p:first-child{
+            color: red;
+        }
+        /*div第一个儿子p元素(按照所有兄弟计算),见结构2*/
+        div>p:first-child{
+            color: red;
+        }
+        /*div第一个儿子p元素(按照所有兄弟计算),见结构3*/
+        div>p:first-child{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 结构1 -->
+    <!-- <div>
+        <p>张三：98</p>
+        <p>李四：99</p>
+        <p>王五：90</p>
+    </div> -->
+
+    <!-- 结构2 -->
+    <!-- <div>
+        <span>张三：98</span>
+        <p>李四：99</p>
+        <p>王五：90</p>
+    </div> -->
+    
+    <!-- 结构3 -->
+    <div>
+        <marquee>
+            <p>张三：98</p>
+        </marquee>
+        <p>李四：99</p>
+        <p>王五：90</p>
+    </div>
+</body>
+</html>

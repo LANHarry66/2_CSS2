@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .out{
+            width: 400px;
+            /* height: 400px; */
+            background-color: aqua;
+            /* border: 1px red solid; */
+        }
+        .in1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-bottom: 50px;
+
+            /* 给in1加上margin，反而是父div动了 */
+            margin-top: 50px;
+
+        }
+        .in2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /* 注释父div高度后，给in2加margin，反而没变化，也是发生塌陷 */
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="out">
+        <div class="in1">ininin</div>
+        <div class="in2">ininininin</div>
+    </div>
+    <div>test</div>
+</body>
+</html>
+
+<!-- 什么是塌陷？ 给第一个子元素设置margin top，给最后一个子元素设置margin bottom，这两个会被父抢走 -->
+<!-- 解决margin塌陷问题
+    1.为父div设置边框border
+    2.给父div设置padding
+    3.父div设置overflow hidden -->

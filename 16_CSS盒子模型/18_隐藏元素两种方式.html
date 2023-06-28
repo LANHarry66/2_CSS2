@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+        }
+        .d1{
+            background-color: aqua;
+
+            /* 这种方式第二个会占位 */
+            /* display: none; */
+
+            /* 这种方式第二个不会占位 */
+            /* visibility: hidden; */
+        }
+        .d2{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+</body>
+</html>

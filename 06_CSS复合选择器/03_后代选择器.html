@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        ul li{
+            color: red;
+        }
+        ol li{
+            color: blue;
+        }
+        ul li a {
+            color: green;
+        }
+        .sbj li{
+            color: chocolate;
+        }
+        .sbj #front{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>抽烟</li>
+        <li>喝酒</li>
+        <li>烫头</li>
+        <div>
+            <li>test</li><!--终归还是属于ul的后代-->
+        </div>
+        <li>
+            <a href="">test2</a>
+        </li>
+    </ul>
+    <hr>
+    <ol>
+        <li>张三</li>
+        <li>李四</li>
+        <li>王五</li>
+    </ol>
+    <ol class="sbj">
+        <li id="front">前端</li>
+        <li>java</li>
+        <li>c</li>
+    </ol>
+</body>
+</html>

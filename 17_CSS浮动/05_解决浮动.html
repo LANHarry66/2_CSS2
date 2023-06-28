@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .out{
+            width: 500px;
+            background-color: gray;
+            border: 1px red solid;
+
+            /* 方案1 是对的不要怀疑*/
+            /* height: 122px; */
+
+            /* 方案2 */
+            float: left;
+
+            /* 方案3 */
+            overflow: auto;
+
+            /* 方案4 */
+
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px red dashed;
+            background-color: skyblue;
+            margin: 10px;
+
+        }
+        .box1,.box2,.box3,.box4{
+            float: left;
+        }
+        .test{
+            /* 消除左浮动影响 */
+            /* clear: left; */
+            /* 消除右浮动影响 */
+            /* clear: right; */
+
+            clear: both;
+        }
+
+        .out::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="out">
+        <!-- 前面兄弟 -->
+        <!-- <div class="box box0">0</div> -->
+
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+
+        <!-- 后面兄弟 -->
+        <div class="box box4">4</div>
+        <!-- <div class="test"></div> -->
+    </div>
+</body>
+</html>
+
+<!-- 总结
+    1.给父元素加指定高度
+    2.给父元素设置浮动，有影响父元素
+    3.给父元素设置overflow：hidden
+    4.在所有浮动元素的后面，添加一个块级元素，兵设置为clear：both
+    5.给浮动元素的父元素，设置伪元素，通过伪元素清除浮动。这种方式最好。实践见下面练习
+-->

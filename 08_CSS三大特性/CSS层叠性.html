@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 外部样式 -->
+    <link rel="stylesheet" href="./demo.css">
+    <!-- ID在外部样式 -->
+    <link rel="stylesheet" href="./demo2.css">
+    <!-- 内部样式 -->
+    
+    <style>
+        /*id优先级最大*/
+        h2{
+            color: red;
+        }
+        h2{
+            color: green;
+        }
+        /* #asd{
+            color: blue;
+        } */
+    </style>
+</head>
+<body>
+    <h2 id="asd">LHR</h2>
+</body>
+</html>
+
+<!-- 虽然外部和内部优先级一样，采用后者居上的原则，但是如果外部在前，内部灾后，且外部有ID，内部无ID。那么浏览器会按照外部中ID的条件来 -->

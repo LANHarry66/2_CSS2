@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* !important>行内>ID>类选择器>元素选择器>*>继承的样式 */
+        /* .container span.slogan{
+            color: red;
+        } */
+
+        /* div>p>span:first-child{
+            color: red;
+        } */
+        /* 加上!important的优先级>行内 */
+        div>p>span:nth-child(1){
+            color: red !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>
+            <span  class="slogan" style="color: burlywood;">LHR haha </span>
+            <span>welcome</span>
+        </p>
+    </div>
+</body>
+</html>
+
+<!-- 权重格式
+(a,b,c) 
+a:表示ID选择器的个数
+b:表示类，伪类，属性 选择器的个数
+c:表示元素，伪元素 选择器的个数 -->
+
+
+<!-- 优先级计算
+一位一位的比较
+先a和a，然后b和b，最后c和c
+只要当前位胜出，就不用比较了
+如果两个的abc权重都一样 ，那么采用后来者居上原则 -->

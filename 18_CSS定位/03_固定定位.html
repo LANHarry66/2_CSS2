@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            height: 3000px;
+        }
+        .out{
+            width: 500px;
+            background-color: skyblue;
+            border: 1px red solid;
+            padding: 20px;
+            /* 当给父元素加相对定位时,2依旧相对html元素在定位 */
+            position: relative;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            
+        }
+        .box1{
+            background-color: gray;
+        }
+        .box2{
+            background-color: orange;
+            /* 开启固定定位,脱离文档流 */
+            position: fixed;
+            right: 0;
+            top: 0;
+        }
+        
+        .box3{
+            
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="out">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+</body>
+</html>
+
+<!-- 固定定位是根据视口走的,即随便屏幕怎么动,固定定位元素跟着屏幕动 -->
+<!-- 特点
+    1.脱离文档流,会对后面的兄弟元素,父元素有影响.
+    2.left不能和right一起设置，一起写left奏效。top和bottom不能一起设置，一起写top奏效
+    3.固定定位和浮动不能同时使用,如果同时设置,浮动会失效.
+    4.固定定位元素也能通过margin调整位置,但不推荐
+    5.无论什么元素(行内,行内块,块级),设置为定位后,都变成定位元素.
+-->

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+        }
+        .d1{
+            background-color: red;
+        }
+        .d2{
+            background-color: aqua;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">hello</div>
+    <div class="d2">hello</div>
+</body>
+</html>
+<!-- 总结：
+    1.子元素的margin参考父元素content计算
+    2.上margin 左margin 影响自己的位子，下margin 右margin影响别人的位子 
+    3.块级元素 行内块元素 均可以完美地设置四个方向margin。但是行内元素只能设置左右margin
+    4.margin的值可以实auto，如果是块级元素设置auto，表示水平居中。而行内元素设置无效
+    5.margin可以负数-->

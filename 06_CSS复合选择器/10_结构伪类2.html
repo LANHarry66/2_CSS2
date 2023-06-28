@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*div第一个儿子p元素(按照所有兄弟计算),见结构1*/
+        /* div>p:first-child{
+            color: red;
+        } */
+        
+        /*div第一个儿子p元素(按照所有兄弟计算),见结构1*/
+        /* div>p:last-child{
+            color: green;
+        } */
+        
+        /*div第一个儿子p元素(按照所有兄弟计算),见结构2*/
+        /* span是最后一个孩子，但是不是p元素 */
+        /* div>p:last-child{
+            color: green;
+        } */
+       
+        /*div第n个儿子p元素,见结构3*/
+        /* 参数可以是0-n
+            参数也可以是公式如：2n，表示所有偶数
+            如果想要前5个，-n+5 
+            注意参数形式必须是：an+b
+            */
+        /* div>p:nth-child(2){
+            color: orange;
+        } */
+
+        /* div第一个某个类型的元素，见结构4 */
+        /* div>p:first-of-type{
+            color: red;
+        } */
+
+        /* div最后一个某个类型的元素，见结构5 */
+        /* div>p:last-of-type{
+            color: red;
+        } */
+        
+        /* 同一个类型的第n个 见结构5*/
+        div>p:nth-of-type(3){
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 结构1 -->
+    <!-- <div>
+        <p>张三：98</p>
+        <p>李四：99</p>
+        <p>王五：90</p>
+    </div> -->
+
+    <!-- 结构2 -->
+    <!-- <div>
+        <p>张三：98</p>
+        <p>李四：99</p>
+        <span>王五：90</span>
+    </div> -->
+
+    <!-- 结构3 -->
+    <!-- <div>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+    </div> -->
+
+    <!-- 结构4 -->
+    <!-- <div>
+        <span>1</span>
+        <p>2</p>
+        <p>3</p>
+    </div> -->
+
+    <!-- 结构5 -->
+    <div>
+        <span>5</span>
+        <p>1</p>
+        <p>2</p>
+        <span>6</span>
+        <p>3</p>
+        <span>4</span>
+    </div>
+</body>
+</html>
